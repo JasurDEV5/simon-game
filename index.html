@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon The Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="simon-container">
+            <div
+                v-for="(button, index) in buttons"
+                :key="index"
+                class="simon-button"
+                :class="{ active: isActive(index) }"
+                @click="handleButtonClick(index)"
+            ></div>
+        </div>
+        <div class="difficulty-buttons">
+            <button @click="startGame('easy')">Easy</button>
+            <button @click="startGame('normal')">Normal</button>
+            <button @click="startGame('hard')">Hard</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>

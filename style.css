@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.simon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 10px;
+}
+
+.simon-button {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.simon-button.active {
+    background-color: #00f;
+}
+
+.difficulty-buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 10px;
+}
